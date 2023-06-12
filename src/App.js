@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-import Sign_up from './Sign_up.js';
+import Signup from './Signup.js';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 import {
@@ -82,11 +82,7 @@ function App() {
     );
   };
 
-  // const handleMenuItemClick = (path) => {
-  //   if (path === '/signup') {
-  //     // Redirect to the Sign Up page
-  //     window.location.href = '/signup';
-  //   }
+ 
   const handleMenuItemClick = () => {
     setIsProfileMenuOpen(false);
   };
@@ -207,8 +203,8 @@ function App() {
       </Layout>
     </Layout>
     <Routes>
-    <Route exact path='/' component={<App/>}/>
-      <Route path='/signup' element={<Sign_up/>} />
+      <Route exact path='/' />
+      <Route path='/signup' element={<Signup/>} />
       </Routes>
     </Router>
   );
